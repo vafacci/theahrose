@@ -27,11 +27,16 @@ export default function App() {
           <ProfileHero
             name={profile.name}
             handle={profile.handle}
-            location={profile.location}
-            bio={profile.bio}
             hero={profile.hero}
             socials={socials}
           />
+
+          <section className="px-5 pt-4 pb-2 text-center" aria-label="About">
+            <p className="text-[14px] font-semibold text-white">{profile.location}</p>
+            <p className="mx-auto mt-2 max-w-[34ch] text-[14px] leading-relaxed text-white/85">
+              {profile.bio}
+            </p>
+          </section>
 
           <section
             className="grid grid-cols-2 gap-3 px-4 pt-4 pb-6 sm:gap-3.5 sm:px-5 sm:pb-7"
