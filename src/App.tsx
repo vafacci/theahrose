@@ -1,5 +1,4 @@
 import { LinkCard } from "./components/LinkCard";
-import { ProfileBio } from "./components/ProfileBio";
 import { ProfileFooter } from "./components/ProfileFooter";
 import { ProfileHero } from "./components/ProfileHero";
 import { profile } from "./data/profile";
@@ -18,26 +17,24 @@ export default function App() {
         <img
           src={profile.hero.poster}
           alt=""
-          className="h-full w-full scale-110 object-cover blur-3xl brightness-[0.72] saturate-150"
+          className="h-full w-full scale-110 object-cover blur-3xl brightness-[0.65]"
         />
-        <div className="absolute inset-0 bg-[#1a1216]/50" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_8%,rgba(243,168,184,0.42),transparent_42%),radial-gradient(circle_at_85%_5%,rgba(212,184,216,0.32),transparent_38%),linear-gradient(to_bottom,rgba(120,45,75,0.28),rgba(20,15,18,0.78))]" />
+        <div className="absolute inset-0 bg-black/55" />
       </div>
 
       <main className="mx-auto w-full max-w-[540px] md:px-3 md:py-8">
-        <div className="overflow-hidden bg-gradient-to-b from-ink via-[#1a1216] to-[#1f1419] shadow-[0_30px_80px_rgba(120,40,70,0.38)] md:rounded-[32px] md:ring-1 md:ring-rose/25">
+        <div className="overflow-hidden bg-black shadow-[0_30px_80px_rgba(0,0,0,0.45)] md:rounded-[28px]">
           <ProfileHero
             name={profile.name}
             handle={profile.handle}
             location={profile.location}
-            disclosure={profile.disclosure}
+            bio={profile.bio}
             hero={profile.hero}
             socials={socials}
           />
-          <ProfileBio bio={profile.bio} />
 
           <section
-            className="grid grid-cols-2 justify-items-center gap-x-3 gap-y-3.5 px-4 pb-6 sm:gap-x-4 sm:px-5 sm:pb-7"
+            className="grid grid-cols-2 gap-3 px-4 pt-4 pb-6 sm:gap-3.5 sm:px-5 sm:pb-7"
             aria-label="Links"
           >
             {profile.links.map((link) => (

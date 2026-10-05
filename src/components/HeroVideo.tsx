@@ -94,7 +94,7 @@ export function HeroVideo({ mp4, webm, poster, label }: HeroVideoProps) {
       />
       <video
         ref={videoRef}
-        className={`${mediaClass} z-[1]`}
+        className={mediaClass}
         autoPlay
         muted
         loop
